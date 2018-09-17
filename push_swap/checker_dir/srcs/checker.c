@@ -6,7 +6,7 @@
 /*   By: knaidoo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/14 06:08:58 by knaidoo           #+#    #+#             */
-/*   Updated: 2018/09/14 14:51:33 by knaidoo          ###   ########.fr       */
+/*   Updated: 2018/09/17 17:10:47 by knaidoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_checker(t_stack sa, t_stack sb)
 	i = 1;
 	if (sb.top != 0)
 	{
-		ft_putendl("Error");
+		ft_putendl("KO");
 		return ;
 	}
 	tmp = sa.num[0];
@@ -39,13 +39,13 @@ void	ft_checker(t_stack sa, t_stack sb)
 	{
 		if (sa.num[i] < tmp)
 		{
-			ft_putendl("Error");
+			ft_putendl("KO");
 			return ;
 		}
 		tmp = sa.num[i];
 		i++;
 	}
-	ft_putendl("Error");
+	ft_putendl("OK");
 }
 
 int		ft_op(t_stack *sa, t_stack *sb, char *str)

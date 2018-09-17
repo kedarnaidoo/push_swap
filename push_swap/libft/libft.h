@@ -6,7 +6,7 @@
 /*   By: knaidoo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/07 15:09:51 by knaidoo           #+#    #+#             */
-/*   Updated: 2018/06/28 11:46:12 by knaidoo          ###   ########.fr       */
+/*   Updated: 2018/09/17 17:01:35 by knaidoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-int					ft_atoi(const char *str);
+long				ft_atoi(const char *str);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);

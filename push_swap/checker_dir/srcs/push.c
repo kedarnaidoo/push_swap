@@ -6,11 +6,11 @@
 /*   By: knaidoo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/14 06:09:16 by knaidoo           #+#    #+#             */
-/*   Updated: 2018/09/14 09:57:21 by knaidoo          ###   ########.fr       */
+/*   Updated: 2018/09/17 16:50:55 by knaidoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap/includes/pushswap.h"
+#include "../../push_swap_dir/includes/pushswap.h"
 
 void	ft_pa(t_stack *sa, t_stack *sb)
 {

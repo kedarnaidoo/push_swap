@@ -104,7 +104,6 @@ $BIN 5 1 3 2 4 | wc -l
 $BIN 5 2 4 3 1 | wc -l
 $BIN 5 2 4 1 3 | wc -l
 $BIN 5 2 1 3 4 | wc -l
-$BIN 5 2 1 4 3 | wc -l
 $BIN 5 2 3 1 4 | wc -l
 $BIN 5 2 3 4 1 | wc -l
 $BIN 5 3 4 1 2 | wc -l

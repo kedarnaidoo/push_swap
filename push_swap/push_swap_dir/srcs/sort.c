@@ -6,51 +6,30 @@
 /*   By: knaidoo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/14 06:12:03 by knaidoo           #+#    #+#             */
-/*   Updated: 2018/09/14 14:34:49 by knaidoo          ###   ########.fr       */
+/*   Updated: 2018/09/17 16:22:12 by knaidoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/pushswap.h"
 
-void    ft_check(t_stack *sa)
+void		ft_order(t_stack sa, t_stack sb)
 {
 	int i;
+	int tmp;
 
-	i = 0;
-	while (i < sa->top)
+	i = 1;
+	if (sb.top != 0)
+		return ;
+	tmp = sa.num[0];
+	while (i < sa.top)
 	{
-		if (sa->num[i] > sa->num[i + 1])
-			i++;
-		else
-			exit(-1);
+		if (sa.num[i] < tmp)
+			return ;
+		tmp = sa.num[i];
+		i++;
 	}
+	exit(0);
 }
-/*
-   void	ft_check(t_stack sa, t_stack sb)
-   {
-   int i;
-//int tmp;
-
-i = sa.top;;
-if (sb.top != 0)
-return ;
-while (sa.num[i] > 0)
-{
-if (sa.num[i] < sa.num[i - 1])
-i--;
-else
-exit (1);
-}
-//	tmp = sa.num[0];
-//	while (i < sa.top)
-//	{
-//		if (sa.num[i] < tmp)
-//			return ;
-//		tmp = sa.num[i];
-//		i++;
-//	}
-//	exit(0);
-}*/
 
 long	ft_low(t_stack sa)
 {
@@ -104,6 +83,7 @@ void	ft_splitstack(t_stack *sa)
 	sb.num = (long *)malloc(BUFF_SIZE);
 	while (sa->top > 3)
 	{
+		ft_order(*sa, sb);
 		low = ft_low(*sa);
 		if (low == sa->num[1])
 			ft_sa(sa);

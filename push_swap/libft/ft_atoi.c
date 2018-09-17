@@ -6,16 +6,16 @@
 /*   By: knaidoo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 14:33:59 by knaidoo           #+#    #+#             */
-/*   Updated: 2018/06/18 13:40:24 by knaidoo          ###   ########.fr       */
+/*   Updated: 2018/09/17 17:13:40 by knaidoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_atoi(const char *str)
+/*
+long	ft_atoi(const char *str)
 {
-	int	k;
-	int n;
+	long	k;
+	long	n;
 
 	k = 0;
 	n = 0;
@@ -30,4 +30,26 @@ int	ft_atoi(const char *str)
 	while (*str && ft_isdigit(*str))
 		k = (k * 10) + (*str++ - '0');
 	return (k * n);
+} */
+
+long atol(const char* str)
+{
+	long val = 0;
+	bool neg = false;
+
+	while((*str >= '\t' && *str <= '\r') || *str == 32
+		str++;
+	switch(*str)
+	{
+		case '-':
+			neg = true;
+		// intentional fallthrough
+		case '+':
+			str++;
+	}
+	while(isdigit(*str))
+	{
+		val = (10 * val) + (*str++ - '0');
+	}
+	return neg ? -val : val;
 }
